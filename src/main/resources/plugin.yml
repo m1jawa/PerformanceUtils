@@ -1,0 +1,4 @@
+name: PerformanceUtils
+version: '1.0.0'
+main: m1jawa.performanceUtils.PerformanceUtils
+api-version: '1.21'

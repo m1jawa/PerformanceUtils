@@ -1,0 +1,33 @@
+# ALL fields are required
+
+tps-statuses:
+  # Status name: lowest TPS in range
+  ok: 19.5         # TPS considered OK; no warnings if TPS >= this value
+  acceptable: 15.0 # TPS considered acceptable
+  critical: 7.0    # TPS considered critical
+
+messages:
+  normalized-tps: "Server load returned to normal"
+  tps-normalizes-part1: "Server load is normalizing | additional info: average TPS for last minute: "
+  tps-normalizes-part2: ", for last 5 minutes: "
+  ok-tps: "Server under some load, TPS: "
+  acceptable-tps: "Server heavily loaded, TPS: "
+  critical-tps: "Server overloaded! TPS: "
+  more-info: " | duration: %dm %ds, min TPS: %.1f"
+  diagnostics: " | DIAGNOSTICS: Players: %d, Entities: %d, Chunks: %d"
+
+pings:
+  in-game: true       # Send TPS messages to players in-game
+  console: true       # Send TPS messages to server console
+  discord: true       # Send TPS messages to Discord
+  nicknames: []     # Specific in-game players to ping (by nickname)
+
+checks:
+  frequency: 60           # Frequency of TPS checks in seconds; recommended between 60 and 180 seconds
+  average-tps-time: 1      # 1=check TPS from last 5 min; 2=check TPS from last 15 min
+  min-state-time: 40       # Minimum time in seconds for TPS to remain in a range before triggering a new state
+
+discord:
+  webhook-url: ""  # Discord webhook URL for sending messages
+  ping-role: true  # Whether to ping a role when sending a message
+  role-id: ""      # ID of the Discord role to ping
