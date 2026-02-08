@@ -25,6 +25,16 @@ The plugin tracks server load status and includes features such as:
 ---
 <br>
 
+## Supported versions
+
+### PaperAPI ONLY
+
+Minecraft versions:
+ - 1.21.8
+
+---
+<br>
+
 ## Installation
 
 You can install PerformanceUtils in one of the following ways:
